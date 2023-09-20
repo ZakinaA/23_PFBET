@@ -15,7 +15,7 @@ public class PaysController {
     private PaysService paysService;
 
     /**
-     * Read - Get all apys
+     * Read - Get all pays
      * @return - An Iterable object of Pays full filled
      */
     @GetMapping("/pays")

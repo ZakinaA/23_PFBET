@@ -15,6 +15,9 @@ public class Sport {
     @Column(name="nom")
     private String nom;
 
+    @Column(name="dateIntroduction")
+    private String dateIntroduction;
+
 
 
 }
