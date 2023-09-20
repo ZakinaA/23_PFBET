@@ -26,7 +26,7 @@ public class SportService {
         sportRepository.deleteById(id);
     }
 
-    public Sport saveSport(Sport sport) {
+    public static Sport saveSport(Sport sport) {
         Sport savedSport = sportRepository.save(sport);
         return savedSport;
     }
