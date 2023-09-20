@@ -15,7 +15,6 @@ public class Sport {
     @Column(name="nom")
     private String nom;
 
-    @Column(name="descriptif")
-    private String descriptif;
+
 
 }
