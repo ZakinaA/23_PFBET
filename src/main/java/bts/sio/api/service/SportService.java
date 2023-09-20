@@ -30,5 +30,9 @@ public class SportService {
         Sport savedSport = sportRepository.save(sport);
         return savedSport;
     }
+
+    public Iterable<Sport> getSports() {
+        return null;
+    }
 }
 
