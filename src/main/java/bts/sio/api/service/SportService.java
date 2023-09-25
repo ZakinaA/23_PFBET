@@ -1,5 +1,6 @@
 package bts.sio.api.service;
 
+import bts.sio.api.model.Athlete;
 import lombok.Data;
 import bts.sio.api.model.Sport;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,13 +27,16 @@ public class SportService {
         sportRepository.deleteById(id);
     }
 
-    public static Sport saveSport(Sport sport) {
+
+    public Sport saveSport(Sport sport) {
         Sport savedSport = sportRepository.save(sport);
         return savedSport;
     }
+    public Sport createSport(Sport sport) {
+        Sport savedSport = sportRepository.save(sport);
+        return savedSport;
 
-    public Iterable<Sport> getSports() {
-        return null;
     }
+
 }
 
