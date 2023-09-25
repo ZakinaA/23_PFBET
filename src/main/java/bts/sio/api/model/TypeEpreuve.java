@@ -5,13 +5,14 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "epreuve")
-public class Epreuve {
+@Table(name = "typeepreuve")
+public class TypeEpreuve {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "nom")
-    private String nom;
+    private String nom ;
+
+
 }
