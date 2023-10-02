@@ -14,4 +14,7 @@ public class Epreuve {
 
     @Column(name = "nom")
     private String nom;
+
+    @Column(name = "typeEpreuve")
+    private String typeEpreuve;
 }
