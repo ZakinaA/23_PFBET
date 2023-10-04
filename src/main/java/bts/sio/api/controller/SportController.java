@@ -40,9 +40,9 @@ public class SportController {
             if(nom != null) {
                 currentSport.setNom(nom);
             }
-            String Date_introduction = sport.getDate_introduction();
-            if(Date_introduction != null) {
-                currentSport.setDate_introduction(Date_introduction);;
+            String descriptif = sport.getDescriptif();
+            if(descriptif != null) {
+                currentSport.setDescriptif(descriptif);;
             }
 
             sportService.saveSport(currentSport);
