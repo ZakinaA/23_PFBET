@@ -72,6 +72,10 @@ public class PariController {
             if(mise != null) {
                 currentPari.setMise(mise);;
             }
+            String cote = pari.getCote();
+            if(cote != null) {
+                currentPari.setCote(cote);;
+            }
 
             pariService.savePari(currentPari);
             return currentPari;
