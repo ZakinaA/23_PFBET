@@ -25,5 +25,8 @@ public class Pari {
     @Column(name = "mise")
     private String mise;
 
+    @Column(name = "cote")
+    private String cote;
+
 
 }
