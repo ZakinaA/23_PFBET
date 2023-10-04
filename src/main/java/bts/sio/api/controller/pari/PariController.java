@@ -40,12 +40,12 @@ public class PariController {
     }
 
     /**
-     * Read - Get all pari
+     * Read - Get all paris
      * @return - An Iterable object of Pari full filled
      */
-    @GetMapping("/pari")
-    public Iterable<Pari> getPari() {
-        return pariService.getPari();
+    @GetMapping("/paris")
+    public Iterable<Pari> getParis() {
+        return pariService.getParis();
     }
 
     /**
