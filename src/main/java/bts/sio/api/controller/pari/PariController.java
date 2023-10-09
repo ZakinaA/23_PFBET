@@ -54,16 +54,20 @@ public class PariController {
      * @param pari - The pari object updated
      * @return
      */
-    @PutMapping("/pari/{id}")
+    @PutMapping("/updatePari/{id}")
     public Pari updatePari(@PathVariable("id") final Long id, @RequestBody Pari pari) {
         Optional<Pari> e = pariService.getPari(id);
+
+
         if(e.isPresent()) {
             Pari currentPari = e.get();
 
             String libelle = pari.getLibelle();
+
             if(libelle != null) {
                 currentPari.setLibelle(libelle);
             }
+
             String place = pari.getPlace();
             if(place != null) {
                 currentPari.setPlace(place);;
