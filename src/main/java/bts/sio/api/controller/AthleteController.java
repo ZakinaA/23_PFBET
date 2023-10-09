@@ -69,6 +69,7 @@ public class AthleteController {
                 currentAthlete.setPrenom(prenom);;
             }
 
+
             athleteService.saveAthlete(currentAthlete);
             return currentAthlete;
         } else {

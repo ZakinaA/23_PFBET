@@ -18,7 +18,7 @@ public class PariService {
         return pariRepository.findById(id);
     }
 
-    public Iterable<Pari> getPari() {
+    public Iterable<Pari> getParis() {
         return pariRepository.findAll();
     }
 
