@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import bts.sio.api.service.pari.PariService;
 
+import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -94,4 +95,9 @@ public class PariController {
         pariService.deletePari(id);
     }
 
+
+    @GetMapping("/paris/{utilisateur_id}")
+    public List<Pari> getParisByUserId(@PathVariable Long utilisateur_id) {
+        return pariService.getParisByUserId(utilisateur_id);
+    }
 }

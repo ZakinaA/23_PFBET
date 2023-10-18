@@ -1,10 +1,15 @@
 package bts.sio.api.controller;
 
 import bts.sio.api.model.Epreuve;
+import bts.sio.api.model.Sport;
 import bts.sio.api.service.EpreuveService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.time.LocalDate;
+import java.util.Date;
 import java.util.Optional;
+
 @RestController
 public class EpreuveController {
 
@@ -24,6 +29,7 @@ public class EpreuveController {
             return null;
         }
     }
+
     @GetMapping("/epreuves")
     public Iterable<Epreuve> getEpreuves() { return epreuveService.getEpreuves();}
 
@@ -33,10 +39,26 @@ public class EpreuveController {
         if(e.isPresent()) {
             Epreuve currentEpreuve = e.get();
 
-            String nom = epreuve.getNom();
-            if(nom != null) {
-                currentEpreuve.setNom(nom);
+            String libelle = epreuve.getLibelle();
+            if(libelle != null) {
+                currentEpreuve.setLibelle(libelle);
             }
+
+            LocalDate dateDebut = epreuve.getDate_debut();
+            if(dateDebut != null){
+                currentEpreuve.setDate_debut(dateDebut);
+            }
+
+            LocalDate dateFin = epreuve.getDate_fin();
+            if(dateFin != null){
+                currentEpreuve.setDate_fin(dateFin);
+            }
+
+            Sport sport_id = epreuve.getSport();
+            if(sport_id != null){
+                currentEpreuve.setSport(sport_id);
+            }
+
             epreuveService.saveEpreuve(currentEpreuve);
             return currentEpreuve;
         } else {
@@ -47,7 +69,5 @@ public class EpreuveController {
     public void deleteEpreuve(@PathVariable("id") final Long id) {
         epreuveService.deleteEpreuve(id);
     }
-
-
 
 }

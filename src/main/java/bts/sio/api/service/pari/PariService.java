@@ -6,6 +6,7 @@ import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Data
@@ -29,5 +30,9 @@ public class PariService {
     public Pari savePari(Pari pari) {
         Pari savedPari = pariRepository.save(pari);
         return savedPari;
+    }
+
+    public List<Pari> getParisByUserId(Long utilisateur_id) {
+        return pariRepository.findByUtilisateurId(utilisateur_id);
     }
 }

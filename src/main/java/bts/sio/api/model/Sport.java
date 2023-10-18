@@ -18,7 +18,8 @@ public class Sport {
     @Column(name="descriptif")
     private String descriptif;
 
-
+    @Column(name="nom_image")
+    private String nom_image;
 
 
 }

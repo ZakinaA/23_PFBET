@@ -2,6 +2,7 @@ package bts.sio.api.model.pari;
 
 import bts.sio.api.model.Athlete;
 import bts.sio.api.model.Sport;
+import bts.sio.api.model.Utilisateur;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -28,5 +29,8 @@ public class Pari {
     @Column(name = "cote")
     private String cote;
 
+    @ManyToOne
+    @JoinColumn(name= "utilisateur_id")
+    private Utilisateur utilisateur;
 
 }

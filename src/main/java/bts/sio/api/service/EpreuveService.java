@@ -1,6 +1,5 @@
 package bts.sio.api.service;
 
-import bts.sio.api.model.Athlete;
 import bts.sio.api.model.Epreuve;
 import bts.sio.api.repository.EpreuveRepository;
 import lombok.Data;
@@ -12,6 +11,7 @@ import java.util.Optional;
 @Data
 @Service
 public class EpreuveService {
+
     @Autowired
     private EpreuveRepository epreuveRepository;
 
@@ -31,4 +31,5 @@ public class EpreuveService {
         Epreuve savedEpreuve = epreuveRepository.save(epreuve);
         return savedEpreuve;
     }
+
 }
